@@ -13,7 +13,10 @@ function AnalyzeData(){
 
    
     useEffect(()=>{
-        
+        axios.get('http://localhost:8080/clinicalservices/api/patients/analyze/'+patientId).then(res=>{
+            setData(res.data);
+            setLoading(false);
+        })
     },[]);
 
   

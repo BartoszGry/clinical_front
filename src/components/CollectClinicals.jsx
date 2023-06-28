@@ -18,11 +18,22 @@ function CollectClinicals(){
 
 
     useEffect(()=>{
-    
+    axios.get('http://localhost:8080/clinicalservices/api/patients/'+patientId).then(res=>{
+        setPatientData(res.data);
+        setLoading(false);
+    })
     });
  
     const handleSubmit=(event)=>{
-     
+        event.preventDefault();
+        const data = {
+            patientId:patientId,
+            componentName:componentName,
+            componentValue:componentValue
+     };
+     axios.post('http://localhost:8080/clinicalservices/api/clinicals/'+data).then(res=>{
+        toast("Patient data added succesfully")
+     })
 
     }
 

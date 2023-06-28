@@ -1,8 +1,10 @@
 .App {
   text-align: center;
-  background-color: red;
-  height: 100px;
-  width: 100px;
+ 
+}
+
+#root{
+  align-self: stretch;
 }
 
 .App-logo {
@@ -39,7 +41,7 @@ table, th, td {
 }
 
 
-tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(even){background-color: #acacac;}
 
 tr:hover {background-color: #ddd;}
 

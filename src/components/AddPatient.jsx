@@ -18,7 +18,7 @@ function AddPatient(){
                 lastName:lastName,
                 age:age
         }
-     axios.post('localhost:8080/clinicalservices/api/patients',data).then(res=>{
+     axios.post('http://localhost:8080/clinicalservices/api/patients',data).then(res=>{
         toast("Patient added successfully");
         event.preventDefault();
      })

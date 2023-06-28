@@ -10,6 +10,10 @@ import {toast,ToastContainer } from 'react-toastify';
 function App() {
   
   return (
+    <div className="App">
+        <ToastContainer autoClose={2000} 
+        position = {toast.POSITION.BOTTOM_CENTER}/>
+        
     <Router>
      <Routes>
         <Route  path="/" element={<Home/>} />
@@ -18,6 +22,7 @@ function App() {
         <Route  path="/analyze/:patientId" element={<AnalyzeData/>}/>
     </Routes>
     </Router>
+    </div>
   );
 }
 

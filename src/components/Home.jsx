@@ -12,7 +12,7 @@ function Home(){
     useEffect(()=>{
       axios.get('http://localhost:8080/clinicalservices/api/patients').then(res=>{
         setPatientData(res.data);
-        console.log(data);
+        console.log(patientData);
         setLoading(false);
       })
     },[])
@@ -31,7 +31,7 @@ function Home(){
                     </tr>
                 </thead>
                 <tbody>
-{!isLoading?patientData.map(patient=><RowCreator item={patient}/>):""}
+{!isLoading?patientData.map(patient=><RowCreator item={patient}/>):null}
 
                 </tbody>
             </table>
